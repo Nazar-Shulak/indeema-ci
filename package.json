@@ -14,18 +14,19 @@
   "dependencies": {
     "aws-sign2": "^0.7.0",
     "duplicate-package-checker-webpack-plugin": "^3.0.0",
-    "ldapjs": "^1.0.2",
-    "nodemailer": "^6.4.5",
-    "socket.io": "^2.3.0",
-    "strapi": "3.0.0-beta.18.1",
-    "strapi-admin": "3.0.0-beta.18.1",
-    "strapi-connector-mongoose": "3.0.0-beta.18.1",
-    "strapi-plugin-content-manager": "3.0.0-beta.18.1",
-    "strapi-plugin-content-type-builder": "3.0.0-beta.18.1",
-    "strapi-plugin-email": "3.0.0-beta.18.1",
-    "strapi-plugin-upload": "3.0.0-beta.18.1",
-    "strapi-plugin-users-permissions": "3.0.0-beta.18.1",
-    "strapi-utils": "3.0.0-beta.18.1"
+    "ldapjs": "^2.3.1",
+    "nodemailer": "^6.7.2",
+    "socket.io": "^4.4.1",
+    "strapi": "^3.6.8",
+    "strapi-admin": "^3.6.8",
+    "strapi-utils": "^3.6.8",
+    "strapi-plugin-content-type-builder": "^3.6.8",
+    "strapi-plugin-content-manager": "^3.6.8",
+    "strapi-plugin-users-permissions": "^3.6.8",
+    "strapi-plugin-email": "^3.6.8",
+    "strapi-plugin-upload": "^3.6.8",
+    "strapi-plugin-i18n": "^3.6.8",
+    "strapi-connector-mongoose": "^3.6.8"
   },
   "author": {
     "email": "support@indeema.com",
@@ -50,7 +51,7 @@
     "uuid": "824b53c2-9cc7-4900-84b2-45876ebaf632"
   },
   "engines": {
-    "node": ">=10.0.0",
+    "node": ">=10.16.0 <=14.x.x",
     "npm": ">=6.0.0"
   },
   "license": "LGPL"

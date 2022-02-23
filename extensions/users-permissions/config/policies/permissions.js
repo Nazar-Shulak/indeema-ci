@@ -22,11 +22,11 @@ module.exports = async (ctx, next) => {
           .query('user', 'users-permissions')
           .findOne({ id }, ['role']);
 
-        if (strapi.config.LDAP_AUTH_ENABLE) {
+        if (strapi.config.get("custom.LDAP_AUTH_ENABLE")) {
           const ldapUser = await strapi.plugins['users-permissions'].services.user.ldapFindUser(ctx.state.user.username);
 
           //If user not exists or blocked or not permitted then we block this user
-          if (!ldapUser && strapi.config.LDAP_AUTH_ENABLE) {
+          if (!ldapUser && strapi.config.get("custom.LDAP_AUTH_ENABLE")) {
             await strapi.plugins['users-permissions'].services.user.edit({
               id: ctx.state.user._id.toString()
             }, {

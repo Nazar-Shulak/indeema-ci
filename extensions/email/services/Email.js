@@ -17,8 +17,8 @@ module.exports = {
       port: 465,
       secure: true,
       auth: {
-        user: strapi.config.INDEEMA_MAILING_USER,
-        pass: strapi.config.INDEEMA_MAILING_PWD
+        user: strapi.config.get("custom.INDEEMA_MAILING_USER"),
+        pass: strapi.config.get("custom.INDEEMA_MAILING_PWD")
       }
     };
 
@@ -26,7 +26,7 @@ module.exports = {
     const transporter = nodemailer.createTransport(configTransport);
 
     const emailArgs = _.assign(options, {
-      from: `Indeema Mailing <${strapi.config.INDEEMA_MAILING_USER}>`
+      from: `Indeema Mailing <${strapi.config.get("custom.INDEEMA_MAILING_USER")}>`
     });
 
     // Return a promise of the function that sends the email.
