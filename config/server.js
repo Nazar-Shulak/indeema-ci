@@ -1,15 +1,14 @@
-module.exports = ({ env }) => ({
-    host: env('HOST', 'localhost'),
-    port: env.int('PORT', 1338),
+module.exports = () => ({
+    host: process.env.HOST || 'localhost',
+    port: process.env.PORT || 1338,
     admin:{
         auth:{
-            secret: env('ADMIN_JWT_SECRET', '92e096b0dd7b57921e9d0a17d47728f9')
+            secret: process.env.JWT_SECRET || 'aafca602-8a10-4d0e-b683-ccd6e293c011'
         },
         autoOpen: false
     },
-    proxy: env.bool('IS_PROXIED', true),
+    proxy: process.env.IS_PROXIED || true,
     cron: {
-      enabled: env.bool('CRON_ENABLED', false),
-    },
+      enabled: process.env.CRON_ENABLED || false
+    }
   });
-        

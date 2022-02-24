@@ -67,7 +67,7 @@ module.exports = {
         query.username = params.identifier;
       }
 
-      if (strapi.config.LDAP_AUTH_ENABLE) {
+      if (strapi.config.get("custom.LDAP_AUTH_ENABLE")) {
 
         //LDAP Search
         const ldapUser = await strapi.plugins['users-permissions'].services.user.ldapFindUser(query.email || query.username, params.password);
